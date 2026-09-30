@@ -4,13 +4,18 @@
   "description": "QuorumCredit Event Indexer Service",
   "main": "indexer.ts",
   "scripts": {
-    "start": "ts-node indexer.ts",
-    "dev": "nodemon --exec ts-node indexer.ts",
-    "build": "tsc",
+    "start": "node init && ts-node indexer.ts",
+    "dev": "node init && nodemon --exec ts-node indexer.ts",
+    "build": "node init && tsc",
     "test": "jest --coverage",
     "test:watch": "jest --watch"
   },
-  "keywords": ["quorumcredit", "soroban", "indexer", "events"],
+  "keywords": [
+    "quorumcredit",
+    "soroban",
+    "indexer",
+    "events"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {
@@ -31,7 +36,9 @@
   "jest": {
     "preset": "ts-jest",
     "testEnvironment": "node",
-    "testMatch": ["**/*.test.ts"],
+    "testMatch": [
+      "**/*.test.ts"
+    ],
     "collectCoverageFrom": [
       "indexer.ts"
     ]

@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "vite",
-    "build": "tsc && vite build",
+    "start": "node init && vite",
+    "build": "node init && tsc && vite build",
     "test": "vitest run",
     "test:watch": "vitest",
     "check:locales": "node scripts/check-locale-keys.mjs"
